@@ -116,11 +116,23 @@ task dockerfileCreate(type: Dockerfile) {
 }
 
 task dockerfileCopyScript(type: Copy){
+    doFirst {
+        println System.getProperty("user.dir")
+        fileTree(".").visit { FileVisitDetails details ->
+            println details.file.path
+        }
+    }
     group 'docker'
 
     from rootProject.file("/build-dependency/run.sh")
     from rootProject.file("/build-dependency/config.yaml")
     into dockerfileCreate.destFile.parentFile
+    doLast {
+        println System.getProperty("user.dir")
+        fileTree(".").visit { FileVisitDetails details ->
+            println details.file.path
+        }
+    }
 }
 
 task containerStop(type: DockerStopContainer) {
