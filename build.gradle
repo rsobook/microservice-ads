@@ -117,7 +117,7 @@ task dockerfileCreate(type: Dockerfile) {
 
 task dockerfileCopyScript(type: Copy){
     group 'docker'
-    from rootProject.file("/build-dependency/run.sh")
+    from project.projectDir.path + "/build-dependency/run.sh"
     into dockerfileCreate.destFile.parentFile
 }
 
