@@ -26,7 +26,7 @@ public class AdsResource {
     );
 
     @GET
-    public Response getList() {
+    public Response get() {
         int i = (int)(Math.random() * adsList.size());
         return Response.ok(adsList.get(i)).build();
     }
