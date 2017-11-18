@@ -114,7 +114,7 @@ docker {
 task dockerfileCreate(type: Dockerfile) {
     group 'docker'
     destFile = project.file('build/kumuluzee/Dockerfile')
-    from 'openjdk:8-jre-alpine'
+    from 'openjdk:8-jdk'
     maintainer 'Jan Gasperlin "jg1724@student.uni-lj.si"'
 
     environmentVariable("PORT", port)
