@@ -4,6 +4,9 @@ metadata:
   name: ms-ads
 spec:
   replicas: 1
+  selector:
+      matchLabels:
+        app: ms-ads
   template:
     metadata:
       labels:
