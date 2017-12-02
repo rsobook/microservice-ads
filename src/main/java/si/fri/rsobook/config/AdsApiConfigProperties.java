@@ -15,4 +15,8 @@ public class AdsApiConfigProperties {
     public Boolean getAdsEnabled() {
         return adsEnabled;
     }
+
+    public void setAdsEnabled(Boolean adsEnabled) {
+        this.adsEnabled = adsEnabled;
+    }
 }
