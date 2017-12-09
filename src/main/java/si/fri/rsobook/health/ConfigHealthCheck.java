@@ -18,7 +18,7 @@ public class ConfigHealthCheck implements HealthCheck {
     @Override
     public HealthCheckResponse call() {
 
-        if(adsApiConfigProperties.getAdsEnabled() != null){
+        if(adsApiConfigProperties.getAdsEnabled() == null){
             return HealthCheckResponse.named(ConfigHealthCheck.class.getSimpleName()).down().build();
         }
 
