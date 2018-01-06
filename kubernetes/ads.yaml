@@ -13,7 +13,7 @@ spec:
         app: ms-ads
     spec:
       containers:
-        - image: rsobook/ms-ads:2.0.2
+        - image: rsobook/ms-ads:2.0.3
           name: ms-ads
           env:
             - name: PORT
